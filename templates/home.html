@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HR- Promotion Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<!-- Input Form -->
+<div  class="input form">
+  <form action="{{url_for('predict')}}"method="post" id="input head">
+    <h1 id="heading">Promotion Prediction Form</h1>
+    <p style="font-size:26px; font-family:Brush Script MT, Brush Script Std, cursive;">Hey, do you want to check your chances for getting a promotion ?   Then, you are at the right place !!!    Enter your details  below and find out ....  </p> 
+    <p style="font-size:46px; font-family:Brush Script MT, Brush Script Std, cursive;";>All the best</p>
+    <h2 for="region"  >Enter your region where you belong : </h2>
+    <select name="region" id="region" >
+  <option selected>-------Select-------</option>
+    <option value="1">Region 1</option>
+    <option value="2">Region 2</option>
+    <option value="3">Region 3</option>
+    <option value="4">Region 4</option>
+    <option value="5">Region 5</option>
+    <option value="6">Region 6</option>
+    <option value="7">Region 7</option>
+    <option value="8">Region 8</option>
+    <option value="9">Region 9</option>
+    <option value="10">Region 10</option>
+    <option value="11">Region 11</option>
+    <option value="12">Region 12</option>
+    <option value="13">Region 13</option>
+    <option value="14">Region 14</option>
+    <option value="15">Region 15</option>
+    <option value="16">Region 16</option>
+    <option value="17">Region 17</option>
+    <option value="18">Region 18</option>
+    <option value="19">Region 19</option>
+    <option value="20">Region 20</option>
+    <option value="21">Region 21</option>
+    <option value="22">Region 22</option>
+    <option value="23">Region 23</option>
+    <option value="24">Region 24</option>
+    <option value="25">Region 25</option>
+    <option value="26">Region 26</option>
+    <option value="27">Region 27</option>
+    <option value="28">Region 28</option>
+    <option value="29">Region 29</option>
+    <option value="30">Region 30</option>
+    <option value="31">Region 31</option>
+    <option value="32">Region 32</option>
+    <option value="33">Region 33</option>
+    <option value="34">Region 34</option>
+    <option value="35">Region 35</option>
+    </select>
+    <br>    
+    <h2 id="input">Enter your age : </h2>
+    <input type="number" name="age" placeholder="(e.g., 24)" min=21 max= 60 maxlength=2>
+    <script>
+          if(age.charCode < 21 || age.charCode > 60) {
+            return false; // not a digit
+          } 
+    </script>
+    <br>
+    <h2 for="gen" >Enter your gender : </h2>
+    <select name="gen" id="gen">
+    <option selected>-------Select-------</option>
+    <option value="gm">Male</option>
+    <option value="gf">Female</option>
+    </select>
+    <br>
+    <h2 for="heq" >Enter your highest educational qualification : </h2>
+    <select name="heq" id="heq">
+    <option selected>-------Select-------</option>
+    <option value="eb">Bachelor's degree</option>
+    <option value="em">Master's degree</option>
+    <option value="ebs">Below secondary</option>
+    </select>
+    <br>
+    <h2 for="pyr" >Enter previous years rating you got : </h2>
+    <!-- <input type="range" name="pyr" value="5"> -->
+    <select name="pyr" id="pyr" required >
+    <option selected>-------Select-------</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    </select>
+    <br>
+    <h2 id="input">Enter your length of service : </h2>
+    <input type="text" name="los" placeholder="(e.g., 2)">
+    <br>
+    <h2 id="input">Enter the no. of trainings you attended : </h2>
+    <input type="number" name="notr" placeholder="(e.g., 7)" min=1 max= 10 maxlength=2>
+    <script>
+      if(notr.charCode < 1 || notr.charCode > 10) {
+        return false; // not a digit
+      } 
+    </script>
+    <br>
+    <h2 id="input">Enter your Average training score :</h2>
+    <input type="number" name="ats" placeholder="(out of 100)" min=0 max= 100 maxlength=3>
+    <script>
+      if(ats.charCode < 0 || ats.charCode > 100) {
+        return false; // not a digit
+      } 
+    </script>
+    <br>
+    <h2 for="aw" >Have you won any awards : </h2>
+    <select name="aw" id="aw">
+    <option selected>-------Select-------</option>
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select>
+    <br>
+    <h2 for="rc" >Enter the recruitment chanel through which you are hired : </h2>
+    <select name="rc" id="rc">
+    <option selected>-------Select-------</option>
+    <option value="rcs">Sourcing</option>
+    <option value="rcr">Referred</option>
+    <option value="rco">Others</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <button id="submit" type="submit">Submit</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p style="font-size:16px; font-family:Brush Script MT, Brush Script Std, cursive;">Website from : Team 5</p> 
+    <br>
+    <br>
+  </form>
+</div>  
+</body>
+</html>
